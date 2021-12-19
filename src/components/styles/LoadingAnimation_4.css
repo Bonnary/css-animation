@@ -1,0 +1,24 @@
+
+
+h1 {
+  font-size: 50px;
+  text-shadow: -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray,
+    1px 1px 0 gray;
+  color: white;
+  position: relative;
+}
+
+h1::before {
+  content: "Loading...";
+  color: lightpink;
+  width: 0%;
+  position: absolute;
+  animation: move 4s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes move {
+  100% {
+    width: 100%;
+  }
+}

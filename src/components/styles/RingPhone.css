@@ -1,0 +1,65 @@
+.phone {
+  width: 60px;
+  height: 60px;
+  background-color: limegreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+}
+
+.icon {
+  transform: rotate(-30deg);
+  animation: shake 0.5s alternate infinite;
+}
+
+.phone::before,
+.phone::after {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  content: "";
+  border: 1px solid limegreen;
+  border-radius: 50%;
+}
+
+.phone::before {
+  animation: move .5s linear infinite;
+}
+
+.phone::after {
+  animation: move 1.5s linear infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-35deg);
+  }
+  60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}

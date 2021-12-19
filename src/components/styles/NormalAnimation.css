@@ -1,0 +1,31 @@
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    transition: all 1s ease;
+    /* For  transform: rotate(50deg);*/
+    perspective: 100px;
+    
+    /* transform-origin only work if you use transform: rotate"X,Y,Z"("Number"deg)*/
+    /* For more info (https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin) */
+    /* transform-origin: top left ; */
+}
+
+.item:hover{
+    /* Move item to x,y,z position */
+    /* transform: translateX(100px) */
+
+    /* Rotate item x,y,z direction 
+    (if you only use "rotate" it will default to "rotateZ" ) */
+
+    /* Mast have  perspective: 100px;*/
+    transform: rotateZ(50deg);
+
+    /* Change item size (1 is the original size)*/
+    /* transform: scale(2); */
+
+    /* Stretch item x,y 
+    (if you only use "skew" it will default to "skewX" ) */
+    /* transform: skew(50deg) */
+    
+}

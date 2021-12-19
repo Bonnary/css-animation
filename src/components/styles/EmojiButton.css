@@ -1,0 +1,134 @@
+.wrapper {
+  width: 400px;
+  height: 100px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.interactive-container {
+  width: 150px;
+  height: 100%;
+  background-color: lightcoral;
+  position: relative;
+}
+
+.person {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gold;
+  position: relative;
+  transition: all 1s ease;
+}
+
+.eyes {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 1s ease;
+
+}
+
+.eye {
+  width: 6px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 35px;
+  height: 20px;
+  background-color: black;
+  border-radius: 0 0 60px 60px;
+  position: absolute;
+  top: 25px;
+  left: 7px;
+  transition: all 1s ease;
+
+}
+
+.mouth-surprised {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 25px;
+  left: 20px;
+}
+
+.smiling-person {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+
+.surprised-person {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+}
+
+.box {
+  /* * Get clip-path from https://bennettfeely.com/clippy/ */
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: relative;
+  top: 20px;
+  left: 52px;
+  transform: rotate(180deg);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.dots {
+  position: absolute;
+  top: 5px;
+  left: 12px;
+}
+
+.text-container {
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper:hover .person {
+  transform: translate(-50px, -25px);
+}
+
+.wrapper:hover .surprised-person {
+  transform: translate(-50px, -50px);
+}
+
+.wrapper:hover .box {
+  opacity: 1;
+}
+
+.wrapper:hover .smiling-person .eyes,
+.wrapper:hover .smiling-person .mouth {
+  transform: translateX(5px) ;
+}

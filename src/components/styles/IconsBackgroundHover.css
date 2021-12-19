@@ -1,0 +1,39 @@
+.button{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    /* color: white; */
+    position: relative;
+    margin: 10px;
+    /* Comment overflow: hidden; to see how the animation work */
+    overflow: hidden;
+}
+
+.button:hover .fill{
+    transform: translate(45px,-45px)
+}
+
+.button:hover .icon{
+    color: white;
+}
+
+
+.icon{
+    z-index: 2;
+}
+
+.fill{
+    width: 120%;
+    height: 120%;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    transition: all .5s ease;
+}
+

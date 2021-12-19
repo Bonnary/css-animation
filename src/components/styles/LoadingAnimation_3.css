@@ -1,0 +1,42 @@
+.container{
+    flex-direction: column-reverse;
+}
+
+h1 {
+  color: coral;
+  font-weight: 300;
+}
+
+.circle-container {
+  display: flex;
+  border-bottom: 2px solid lightcoral;
+  padding: 0px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  animation: loading 0.5s infinite alternate;
+}
+
+.circle-1 {
+  background-color: tomato;
+}
+
+.circle-2 {
+  background-color: salmon;
+  animation-delay: 0.1s;
+}
+
+.circle-3 {
+  background-color: coral;
+  animation-delay: .2s;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateY(-100px);
+  }
+}

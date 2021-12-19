@@ -1,0 +1,38 @@
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  font-size: 20px;
+}
+
+.card {
+  width: 20%;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #555;
+  transform: rotateX(60deg) scale(0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  transition: all .5s ease;
+}
+
+.card:hover{
+transform: rotate(0deg) scale(1) translateY(10px);
+}
+
+img{
+    width: 100%;
+    height: 40%;
+}
+
+.title{
+    color: #555;
+    font-weight: 900;
+}
